@@ -69,7 +69,6 @@ while choice_1 != "quit":
    year_kids = int(year_kids_str)
    #this checks if you input the year you are planning/had kids and sees if its before you were born, because if so that messes up all the math
    while (year_kids <= year_born) and (year_kids != 0):
-      if (year_kids <= year_born) and (year_kids != 0):
          print("yo how could you have a kid before you are even born? input a new year please!")
          year_kids_str = input()
          year_kids = int(year_kids_str)
