@@ -21,12 +21,14 @@ def get_gen(gen_num , kid_names , kid_gen ,kid_age , 	age , had_kid_age , year_b
          print("year :", y)
          print("gen", kid_names[ i ] ,":", kid_gen[ i])
          y += had_kid_age
-         if kid_gen[ i ] == gen_num:
+         if (kid_gen[ i ] == gen_num) or (kid_gen[i] > gen_num ):
             thing = i
             break
-      #continues it for the next batch of generations 
-      for i in range(len(kid_gen)):
-         kid_gen[ i ] = int(kid_gen[i]) + 5
+      #continues it for the next batch of generations
+      if kid_gen[ thing ] == gen_num:
+            break 
+      for p in range(len(kid_gen)):
+         kid_gen[ p ] = int(kid_gen[p]) + 5
    return(y)
 
 def get_gen_year(gen_year,had_kid_age,num_decendents,year_born):
@@ -95,7 +97,7 @@ while choice_1 != "quit":
       for i in range(len(kid_names)):
          print("name ", i + 1 , " : ")
          kid_names[ i ] = input()
-         kid_gen[ i ] = int(i)
+         kid_gen[ i ] = int(i + 1)
       #this will fill the array with the names of the generations   
       print("now the fun part. Now give me a generation number, and ill tell you the year ! ")
       gen_num = input()
