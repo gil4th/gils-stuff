@@ -47,12 +47,11 @@ def get_gen_year(gen_year,had_kid_age,num_decendents,year_born):
    print("So by the year ", gen_year," you will have",num_decendents,"decendents!")
 def main():   
    choice_1 = ""
-   while choice_1 != "quit":
+   while choice_1 != "Quit":
       print("hey this program will take your age and when you plan to have kids (or when you did) and making some assumptions like the average age people have kids\nthen tell you at what year a generation of your choice will be born.\nOr you can also enter a year and it will compute how many decedents you are going to have by then")
       print("do you want to do that? If not type Quit, if not type literally anything other than that!")
       choice_1 = input()
-      
-      if choice_1 == "quit":
+      if choice_1 == "Quit":
          break
       choice_1 = ""
       print(" tubular, now do you want to do")
